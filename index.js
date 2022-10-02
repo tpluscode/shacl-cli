@@ -5,19 +5,19 @@ import stream from 'stream'
 import toStream from 'rdf-dataset-ext/toStream.js'
 import { turtle } from '@rdfjs-elements/formats-pretty/serializers'
 import { getReport } from './lib/validate.js'
-import {getPrefixes} from './lib/prefixes.js';
+import {getNamespace} from './lib/prefixes.js';
 import {flattenGlobs} from './lib/paths.js';
 
 const finished = promisify(stream.finished)
 
 program
     .command('validate')
-    .requiredOption('--shapes <shapes...>')
-    .requiredOption('--data <data...>')
-    .option('--prefixes <prefixes...>')
-    .action(async ({ shapes, data, prefixes = [] }) => {
+    .requiredOption('--shapes <shapes...>', 'Sources of the Shapes Graph')
+    .requiredOption('--data <data...>', 'Source of the Data Graph')
+    .option('--prefixes <prefixes...>', 'Prefixes of common vocabularies known to the @zazuko/rdf-vocabularies package', getNamespace)
+    .action(async ({ shapes, data, prefixes }) => {
         const sink = await turtle({
-            prefixes: getPrefixes(prefixes)
+            prefixes,
         })
 
         const report = await getReport(flattenGlobs(shapes), flattenGlobs(data))
