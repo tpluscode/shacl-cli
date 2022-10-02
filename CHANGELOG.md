@@ -1,5 +1,11 @@
 # @tpluscode/shacl-cli
 
+## 0.0.3
+
+### Patch Changes
+
+- 16092fc: Loading trig failed with `Unknown file extension: trig`
+
 ## 0.0.2
 
 ### Patch Changes
