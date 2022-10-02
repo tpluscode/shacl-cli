@@ -1,0 +1,9 @@
+_commit: 1.1.2
+_src_path: https://github.com/tpluscode/github-copier-template.git
+auto_tag: false
+changesets: true
+main_branch: master
+node_version: 16
+package_manager: yarn
+release_with_changesets: true
+

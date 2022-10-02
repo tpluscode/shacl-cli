@@ -1,0 +1,28 @@
+{
+  "name": "shacl-cli",
+  "version": "0.0.0",
+  "description": "Node CLI to validate RDF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpluscode/shacl-cli.git"
+  },
+  "keywords": [
+    "shacl",
+    "rdf",
+    "validate"
+  ],
+  "author": "tpluscode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tpluscode/shacl-cli/issues"
+  },
+  "homepage": "https://github.com/tpluscode/shacl-cli#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.25.0"
+  }
+}
