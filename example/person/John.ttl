@@ -2,5 +2,5 @@
 @prefix ex: <http://example.org/> .
 
 ex:person\/John
-    a schema:Person ;
+  a schema:Person ;
 .

@@ -8,11 +8,12 @@
     "shacl-cli": "./index.js"
   },
   "scripts": {
+    "lint": "eslint . --quiet --ignore-path .gitignore",
     "release": "changeset publish"
   },
   "dependencies": {
-    "@rdfjs/dataset": "^2.0.1",
     "@rdfjs-elements/formats-pretty": "^0.5.1",
+    "@rdfjs/dataset": "^2.0.1",
     "@zazuko/rdf-vocabularies": "*",
     "commander": "^9.4.1",
     "glob": "^8.0.3",
@@ -37,10 +38,22 @@
   "homepage": "https://github.com/tpluscode/shacl-cli#readme",
   "devDependencies": {
     "@changesets/cli": "^2.25.0",
+    "@tpluscode/eslint-config": "^0.3.2",
     "@types/glob": "^8.0.0",
     "@types/rdf-dataset-ext": "^1.0.2",
     "@types/rdf-utils-fs": "^2.1.0",
     "@types/rdf-validate-shacl": "^0.4.0",
-    "@types/rdfjs__dataset": "^2"
+    "@types/rdfjs__dataset": "^2",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "~8.22.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "typescript": "^4.8.4",
+    "standard": "^17.0.0"
   }
 }

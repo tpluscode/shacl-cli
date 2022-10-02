@@ -3,17 +3,17 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
 ex:shape\/Person
-    a sh:NodeShape ;
-    sh:targetClass schema:Person ;
-    sh:property
-        [
-            sh:path schema:name ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-        ] ,
-        [
-            sh:path schema:hasOccupation ;
-            sh:maxCount 1 ;
-            sh:class schema:Occupation ;
-        ] ;
+  a sh:NodeShape ;
+  sh:targetClass schema:Person ;
+  sh:property
+    [
+      sh:path schema:name ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ],
+    [
+      sh:path schema:hasOccupation ;
+      sh:maxCount 1 ;
+      sh:class schema:Occupation ;
+    ] ;
 .
