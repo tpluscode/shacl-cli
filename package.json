@@ -4,6 +4,9 @@
   "description": "Node CLI to validate RDF",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "shacl-cli": "./index.js"
+  },
   "scripts": {
     "release": "changeset publish"
   },
