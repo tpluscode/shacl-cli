@@ -1,0 +1,24 @@
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+
+graph ex:person\/Stacy {
+  ex:person\/Stacy
+    a schema:Person ;
+    schema:name "Stacy" ;
+    schema:hasOccupation
+      [
+        schema:estimatedSalary 1000 ;
+      ] ;
+  .
+}
+
+graph ex:person\/Taylor {
+  ex:person\/Taylor
+    a schema:Person ;
+    schema:name "Taylor" ;
+    schema:hasOccupation
+      [
+        schema:estimatedSalary 2000 ;
+      ] ;
+  .
+}

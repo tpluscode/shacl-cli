@@ -6,7 +6,7 @@ Validate RDF using SHACL from the command line. Uses RDF/JS tooling
 
 * [x] Loads shapes and data graph from any RDF format known to [@rdfjs/formats-common](https://npm.im/@rdfjs/formats-common).
 * [x] Requires only node. No JVM, no Python, etc
-* [x] Easily load shapes and data from multiple sources using globs 
+* [x] Easily load shapes and data from multiple sources using globs
 
 ## Installation
 
@@ -49,11 +49,19 @@ shacl-cli validate \
 
 ### Output prefixes
 
-The output is a nicely formatted turtle. Add `--prefixes` to shorten URIs. 
+The output is a nicely formatted turtle. Add `--prefixes` to shorten URIs.
 
 ```
 shacl-cli validate \
   --shapes example/shape/*.ttl \
   --data example/person/*.ttl \
   --prefixes schema person=http://example.org/person/
+```
+
+### Other formats are supported
+
+```
+shacl-cli validate \
+  --shapes example/shape/*.ttl \
+  --data example/person/multiple.trig
 ```

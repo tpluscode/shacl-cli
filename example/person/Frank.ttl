@@ -6,6 +6,7 @@ ex:person\/Frank
   schema:name "Frank" ;
   schema:hasOccupation
     [
+      a schema:Occupation ;
       schema:estimatedSalary 0 ;
     ] ;
 .
