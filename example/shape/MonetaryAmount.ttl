@@ -1,0 +1,38 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+ex:shape\/MonetaryAmount
+    a sh:NodeShape ;
+    sh:xone
+        (
+            [
+                sh:property
+                    [
+                        sh:path sh:minValue ;
+                        sh:maxCount 1 ;
+                        sh:datatype xsd:int ;
+                    ],
+                    [
+                        sh:path sh:maxValue ;
+                        sh:maxCount 1 ;
+                        sh:datatype xsd:int ;
+                    ]
+            ]
+            [
+                sh:property
+                    [
+                        sh:path schema:value ;
+                        sh:maxCount 1 ;
+                        sh:datatype xsd:int ;
+                    ] ;
+            ]
+        ) ;
+    sh:property
+        [
+            sh:path sh:currency ;
+            sh:maxCount 1 ;
+            sh:datatype xsd:string ;
+        ] ;
+.

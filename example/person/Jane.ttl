@@ -1,0 +1,7 @@
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+
+ex:person\/Jane
+    a schema:Person ;
+    schema:name "Jane" ;
+.

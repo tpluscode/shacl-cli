@@ -1,11 +1,21 @@
 {
-  "name": "shacl-cli",
+  "name": "@tpluscode/shacl-cli",
   "version": "0.0.0",
   "description": "Node CLI to validate RDF",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "release": "changeset publish"
+  },
+  "dependencies": {
+    "@rdfjs/dataset": "^2.0.1",
+    "@rdfjs-elements/formats-pretty": "^0.5.1",
+    "@zazuko/rdf-vocabularies": "*",
+    "commander": "^9.4.1",
+    "glob": "^8.0.3",
+    "rdf-dataset-ext": "^1.0.1",
+    "rdf-utils-fs": "^2.2.0",
+    "rdf-validate-shacl": "^0.4.4"
   },
   "repository": {
     "type": "git",
@@ -23,6 +33,11 @@
   },
   "homepage": "https://github.com/tpluscode/shacl-cli#readme",
   "devDependencies": {
-    "@changesets/cli": "^2.25.0"
+    "@changesets/cli": "^2.25.0",
+    "@types/glob": "^8.0.0",
+    "@types/rdf-dataset-ext": "^1.0.2",
+    "@types/rdf-utils-fs": "^2.1.0",
+    "@types/rdf-validate-shacl": "^0.4.0",
+    "@types/rdfjs__dataset": "^2"
   }
 }

@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+ex:shape\/Occupation
+    a sh:NodeShape ;
+    sh:targetClass schema:Occupation ;
+    sh:property
+        [
+            sh:path schema:estimatedSalary ;
+            sh:minExclusive 0 ;
+            sh:maxCount 1 ;
+            sh:or
+                (
+                    [ sh:datatype xsd:int ]
+                    [ sh:node ex:shape\/MonetaryAmount ]
+                )
+        ] ;
+.
