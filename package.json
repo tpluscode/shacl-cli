@@ -1,6 +1,6 @@
 {
   "name": "@tpluscode/shacl-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Node CLI to validate RDF",
   "main": "index.js",
   "type": "module",
