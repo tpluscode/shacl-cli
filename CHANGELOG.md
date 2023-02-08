@@ -1,5 +1,11 @@
 # @tpluscode/shacl-cli
 
+## 0.0.4
+
+### Patch Changes
+
+- 4018f2d: Add `sh` and `rdf` prefixes when `--prefixes` was not used
+
 ## 0.0.3
 
 ### Patch Changes
